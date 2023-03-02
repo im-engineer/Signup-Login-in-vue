@@ -1,14 +1,14 @@
 <template>
-  <Employee/>
+  <Login/>
 </template>
 
 <script>
-import Employee from './components/Employee.vue'
+import Login from './components/Login.vue'
 
 export default {
   name: 'App',
   components: {
-    Employee
+    Login
   }
 }
 </script>

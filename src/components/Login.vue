@@ -11,10 +11,10 @@
     <form @submit="login">
       <h4>Login Form</h4>
       <input
-        type="username"
-        name="username"
-        placeholder="Enter username"
-        v-model="loginData.username"
+        type="email"
+        name="email"
+        placeholder="Enter email"
+        v-model="loginData.email"
       /><br /><br />
       <input
         type="password"
@@ -35,7 +35,7 @@ export default {
     return {
         error : [],
         loginData : {
-        username: null,
+        email: null,
         password: null,
         }
         };
@@ -43,14 +43,14 @@ export default {
   methods: {
     login(e) {
         this.error = [];
-        if(this.loginData.username && this.loginData.password){
+        if(this.loginData.email && this.loginData.password){
             console.warn("no error")
         }
-        if(!this.loginData.username){
-            this.error.push("username is required")
+        if(!this.loginData.email){
+            this.error.push("email is required")
         }
         if(!this.loginData.password){
-            this.error.push("username is password")
+            this.error.push("password is password")
         }
         console.log("hello", this.error)
          e.preventDefault();
